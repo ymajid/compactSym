@@ -7,6 +7,7 @@ genData:{[n;path]
   {.Q.dd[x;(`$string z),`tab`] set .Q.en[x;] delete date from select from y where date=z}[path;tab;] each distinct tab`date;             / create partitioned db
  };
 
+/ from dbmaint.q
 getPaths:{[path]
   files:key path;
   files:path .Q.dd'files where files like "[0-9]*";
